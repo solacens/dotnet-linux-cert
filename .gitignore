@@ -1,0 +1,6 @@
+# dotnet
+obj/
+bin/
+
+# output folder
+output/
