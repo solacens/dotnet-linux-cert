@@ -6,7 +6,7 @@
     <!-- End of target framework(s) -->
     <!-- Start of metadata for 'dotnet pack' -->
     <PackageId>dotnet-linux-cert</PackageId>
-    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionPrefix>0.0.2</VersionPrefix>
     <Description>dotnet CLI global tool to help handling certs on linux container</Description>
     <PackageTags>tools</PackageTags>
     <IsPackable>true</IsPackable>
