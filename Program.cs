@@ -50,7 +50,7 @@ namespace Linux.Cert {
       if (!string.IsNullOrEmpty (path)) {
         Console.WriteLine ($"Reading certificate from '{path}'...");
 
-        new X509Certificate2 (
+        cert = new X509Certificate2 (
           path,
           password,
           X509KeyStorageFlags.DefaultKeySet);
