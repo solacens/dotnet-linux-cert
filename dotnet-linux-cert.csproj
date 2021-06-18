@@ -6,8 +6,8 @@
     <!-- End of target framework(s) -->
     <!-- Start of metadata for 'dotnet pack' -->
     <PackageId>dotnet-linux-cert</PackageId>
-    <VersionPrefix>0.0.4</VersionPrefix>
-    <Description>dotnet CLI global tool to help handling certs on linux container</Description>
+    <VersionPrefix>0.0.5</VersionPrefix>
+    <Description>Dotnet linux cert helper: Install and list PKCS#12 certificates for *nix system</Description>
     <PackageTags>tools</PackageTags>
     <IsPackable>true</IsPackable>
     <Authors>solacens</Authors>
@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.5.0" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21216.1" />
   </ItemGroup>
 
 </Project>
