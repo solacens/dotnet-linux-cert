@@ -21,7 +21,7 @@ dotnet linux-cert list --help
 ls /Certifcates # Default reading directory or auto-install
 
 a.pfx # Cert A, password protected
-a.txt # Password or cert A
+a.txt # Password for cert A
 b.pfx # Cert B, non password protected
 ```
 
