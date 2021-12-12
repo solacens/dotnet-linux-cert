@@ -19,3 +19,6 @@
 - Revamp sub-commands to be more *nix styled
 - Now supports certificates without password
 - Add `README.md` and `CHANGELOG.md`
+
+## [0.0.6]
+- Support dotnet sdk 6.0

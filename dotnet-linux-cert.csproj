@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <!-- Start of target framework(s) -->
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <!-- End of target framework(s) -->
     <!-- Start of metadata for 'dotnet pack' -->
     <PackageId>dotnet-linux-cert</PackageId>
-    <VersionPrefix>0.0.5</VersionPrefix>
+    <VersionPrefix>0.0.6</VersionPrefix>
     <Description>Dotnet linux cert helper: Install and list PKCS#12 certificates for *nix system</Description>
     <PackageTags>tools</PackageTags>
     <IsPackable>true</IsPackable>
