@@ -25,3 +25,4 @@
 
 ## [0.0.7]
 - Support dotnet sdk(s) up to 6.0
+- Add standalone self contained executable
