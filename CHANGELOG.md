@@ -22,3 +22,6 @@
 
 ## [0.0.6]
 - Support dotnet sdk 6.0
+
+## [0.0.7]
+- Support dotnet sdk(s) up to 6.0

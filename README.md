@@ -8,6 +8,8 @@
 
 ## Usage
 
+Detail explanation in the help commands
+
 ```sh
 dotnet linux-cert --help
 
@@ -25,5 +27,10 @@ a.txt # Password for cert A
 b.pfx # Cert B, non password protected
 ```
 
-## Old version dotnet sdk support
-Check [Changelog](CHANGELOG.md) to see which version needed to be installed
+#### Nuget publish
+```sh
+dotnet pack -c Release -o NugetOutput
+```
+
+## Changelog
+[Changelog](CHANGELOG.md)
