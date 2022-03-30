@@ -1,4 +1,4 @@
-name: dotnet package
+name: Create release
 
 on:
   push:
@@ -29,7 +29,12 @@ jobs:
       matrix:
         runtime-identifier:
           - win-x64
+          - win-x86
+          - linux-x64
           - linux-musl-x64
+          - linux-arm
+          - linux-arm64
+          - osx-x64
     steps:
       - uses: actions/checkout@v2
       - name: Setup dotnet
