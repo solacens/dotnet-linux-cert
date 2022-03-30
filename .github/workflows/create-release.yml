@@ -1,0 +1,53 @@
+name: dotnet package
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref_name }}
+
+  publish:
+    name: Publish
+    needs: create_release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        runtime-identifier:
+          - win-x64
+          - linux-musl-x64
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0'
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Publish with dotnet
+        run: dotnet publish -c Release -o "SCDOutput/${{ matrix.runtime-identifier }}" -f net6.0 -r "${{ matrix.runtime-identifier }}" --self-contained
+      - name: Zip package
+        run: cd "SCDOutput/${{ matrix.runtime-identifier }}" && zip -r "../${{ matrix.runtime-identifier }}.zip" .
+      - name: Upload
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: "SCDOutput/${{ matrix.runtime-identifier }}.zip"
+          asset_name: "${{ matrix.runtime-identifier }}.zip"
+          asset_content_type: application/zip

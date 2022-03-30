@@ -32,5 +32,12 @@ b.pfx # Cert B, non password protected
 dotnet pack -c Release -o NugetOutput
 ```
 
+#### Self-contained deployment releases
+```sh
+FRAMEWORK=net6.0
+RID=linux-musl-x64
+dotnet publish -c Release -o SCDOutput/$RID -f $FRAMEWORK -r $RID --self-contained
+```
+
 ## Changelog
 [Changelog](CHANGELOG.md)
