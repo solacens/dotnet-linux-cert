@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.0.8]
+- Support dotnet sdk(s) up to 7.0
 ## [0.0.7]
 - Support dotnet sdk(s) up to 6.0
 - Add standalone self contained executable

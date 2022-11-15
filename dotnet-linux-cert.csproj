@@ -6,7 +6,7 @@
     <!-- End of target framework(s) -->
     <!-- Start of metadata for 'dotnet pack' -->
     <PackageId>dotnet-linux-cert</PackageId>
-    <VersionPrefix>0.0.7</VersionPrefix>
+    <VersionPrefix>0.0.8</VersionPrefix>
     <Description>Dotnet linux cert helper: Install and list PKCS#12 certificates for *nix system</Description>
     <PackageTags>tools</PackageTags>
     <IsPackable>true</IsPackable>
@@ -20,9 +20,6 @@
     <OutputType>Exe</OutputType>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-linux-cert</ToolCommandName>
-    <PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>true</SelfContained>
-    <PublishReadyToRun>true</PublishReadyToRun>
     <!-- End of other attributes -->
   </PropertyGroup>
 
