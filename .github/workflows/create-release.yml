@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Publish with dotnet
-        run: dotnet publish -c Release -o "SCDOutput/${{ matrix.runtime-identifier }}" -f net6.0 -r "${{ matrix.runtime-identifier }}" --self-contained
+        run: dotnet publish -c Release -o "SCDOutput/${{ matrix.runtime-identifier }}" -f net7.0 -r "${{ matrix.runtime-identifier }}" --self-contained
       - name: Zip package
         run: cd "SCDOutput/${{ matrix.runtime-identifier }}" && zip -r "../${{ matrix.runtime-identifier }}.zip" .
       - name: Upload
