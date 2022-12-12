@@ -20,7 +20,7 @@ dotnet linux-cert list --help
 
 #### Folder structure required for `auto-install`
 ```sh
-ls /Certifcates # Default reading directory or auto-install
+ls /Certifcates # Default reading directory for auto-install
 
 a.pfx # Cert A, password protected
 a.txt # Password for cert A
@@ -34,7 +34,7 @@ dotnet pack -c Release -o NugetOutput
 
 #### Self-contained deployment releases
 ```sh
-FRAMEWORK=net6.0
+FRAMEWORK=net7.0
 RID=linux-musl-x64
 dotnet publish -c Release -o SCDOutput/$RID -f $FRAMEWORK -r $RID --self-contained
 ```
