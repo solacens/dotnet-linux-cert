@@ -22,9 +22,10 @@ dotnet linux-cert list --help
 ```sh
 ls /Certifcates # Default reading directory for auto-install
 
-a.pfx # Cert A, password protected
+a.pfx # Cert A, private key, password protected
 a.txt # Password for cert A
-b.pfx # Cert B, non password protected
+b.pfx # Cert B, private key, non password protected
+c.cer # Cert C, public key, non password protected
 ```
 
 #### Nuget publish
