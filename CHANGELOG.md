@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.0.10]
+- Support extensions more than pfx
 ## [0.0.9]
 - Support dotnet sdk(s) up to 7.0
 ## [0.0.8]

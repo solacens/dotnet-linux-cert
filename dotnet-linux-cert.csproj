@@ -6,7 +6,7 @@
     <!-- End of target framework(s) -->
     <!-- Start of metadata for 'dotnet pack' -->
     <PackageId>dotnet-linux-cert</PackageId>
-    <VersionPrefix>0.0.9</VersionPrefix>
+    <VersionPrefix>0.0.10</VersionPrefix>
     <Description>Dotnet linux cert helper: Install and list PKCS#12 certificates for *nix system</Description>
     <PackageTags>tools</PackageTags>
     <IsPackable>true</IsPackable>

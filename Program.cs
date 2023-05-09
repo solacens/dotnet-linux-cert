@@ -9,7 +9,6 @@ namespace Linux.Cert
 {
   public static class Program
   {
-    private const string PKCS12_FILE_EXTENSION = ".pfx";
     private const string PKCS12_PASSWORD_EXTENSION = ".txt";
 
     public static int Main(string[] args)
@@ -161,7 +160,7 @@ namespace Linux.Cert
       foreach (var filePath in files)
       {
         var ext = Path.GetExtension(filePath);
-        if (ext.Equals(PKCS12_FILE_EXTENSION))
+        if (!ext.Equals(PKCS12_PASSWORD_EXTENSION))
         {
           var passwordFilePath = Path.ChangeExtension(filePath, PKCS12_PASSWORD_EXTENSION);
           if (files.Contains(passwordFilePath))
