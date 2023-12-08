@@ -1,3 +1,7 @@
+# GRADUATED!
+
+> This project is graduated from Github and NuGet. There will not be further changes in the future.
+
 # dotnet-linux-cert
 
 > Helper for install and list PKCS#12 certificates for *nix system
