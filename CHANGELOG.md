@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.0.11]
+- Support build in dotnet 8.0
 ## [0.0.10]
 - Support extensions more than pfx
 ## [0.0.9]
